@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#5b9f85">
+  <meta name="description" content="Petit Monde — activités bilingues pour apprendre, lire et créer.">
+  <title>Petit Monde — Apprendre en douceur</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,600;9..144,700;9..144,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="polish.css">
+  <link rel="stylesheet" href="playful.css">
+</head>
+<body class="auth-required">
+  <a class="skip-link" href="#content">Aller au contenu — Skip to content</a>
+  <section class="auth-gate" id="authGate" aria-label="Authentification — Authentication">
+    <div class="auth-visual">
+      <button class="brand auth-brand" aria-label="Petit Monde"><span class="brand-mark">PM</span><span>Petit Monde<small>Apprendre & créer<br>Learn & create</small></span></button>
+      <div class="auth-art" aria-hidden="true"><span>☀️</span><span>🌈</span><span>📚</span><span>🌱</span></div>
+      <div><p class="eyebrow">Bienvenue dans ton espace — Welcome to your space</p><h1>Apprends, imagine<br>et grandis.<small class="en">Learn, imagine, and grow.</small></h1><p>Des quiz, des poèmes et des histoires pour apprendre avec le sourire. — Quizzes, poems, and stories that make learning joyful.</p></div>
+      <div class="auth-benefits"><span>✓ Sûr — Safe</span><span>✓ Bilingue — Bilingual</span><span>✓ Créatif — Creative</span></div>
+    </div>
+    <div class="auth-panel"><div class="auth-panel-inner" id="authGateBody"></div></div>
+  </section>
+  <div id="app">
+    <aside class="sidebar" id="sidebar">
+      <button class="brand" data-route="home" aria-label="Accueil — Home"><span class="brand-mark">PM</span><span>Petit Monde<small>Apprendre & créer<br>Learn & create</small></span></button>
+      <nav id="nav" aria-label="Navigation principale — Main navigation"></nav>
+      <button class="user-chip" id="authOpen"><span id="userAvatar">?</span><span id="userLabel">Invité<small>Guest</small></span></button>
+    </aside>
+    <button class="nav-scrim" id="navScrim" aria-label="Fermer le menu — Close menu"></button>
+    <main id="content" tabindex="-1">
+      <header class="topbar"><button class="icon-btn menu" id="menuBtn" aria-label="Ouvrir le menu — Open menu">☰</button><div class="crumb" id="crumb"></div><div class="top-actions"><button class="icon-btn" id="musicToggle" aria-label="Musique — Music">♫</button><button class="avatar-btn" id="authTop" aria-label="Compte — Account">☺</button></div></header>
+      <div id="page" class="page" aria-live="polite"></div>
+    </main>
+  </div>
+  <div class="modal" id="modal" aria-hidden="true"><div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><button class="icon-btn modal-close" id="modalClose" aria-label="Fermer — Close">×</button><div id="modalBody"></div></div></div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>
